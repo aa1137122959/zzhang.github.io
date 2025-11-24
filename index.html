@@ -27,11 +27,14 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
-            margin: 20px 0;
+            margin: 10px;
             transition: background-color 0.3s;
         }
+        .pan-btn {
+            background-color: #3366cc;
+        }
         .download-btn:hover {
-            background-color: #2c974b;
+            opacity: 0.9;
         }
         .instructions {
             text-align: left;
@@ -45,28 +48,28 @@
 <body>
     <div class="container">
         <h1>🎉 欢迎使用我的软件</h1>
-        <p>感谢你对我开发的软件感兴趣！</p>
+        <p>由于文件较大，请选择以下方式下载：</p>
         
-        <!-- 注意：下一行链接里的 "你的软件名.exe" 要替换成你实际的文件名 -->
+        <!-- 直接下载按钮（如果文件小于25MB） -->
         <a href="你的软件名.exe" class="download-btn" download>
-            📥 立即下载软件
+            📥 直接下载（小于25MB）
+        </a>
+        
+        <br>
+        
+        <!-- 网盘下载按钮 -->
+        <a href="我用夸克网盘分享了「记账.zip」，点击链接即可保存。打开「夸克APP」，无需下载在线播放视频，畅享原画5倍速，支持电视投屏。
+链接：https://pan.quark.cn/s/0d33ed26a1b2" class="download-btn pan-btn" target="_blank">
+            ☁️ 网盘下载（大于25MB）
         </a>
         
         <div class="instructions">
             <h3>📋 使用说明：</h3>
             <ol>
-                <li>点击上方按钮下载软件</li>
-                <li>下载完成后，找到下载的.exe文件</li>
-                <li>双击运行（如有安全提示请选择"继续运行"）</li>
-                <li>按照软件界面提示操作</li>
+                <li>根据文件大小选择合适的下载方式</li>
+                <li>网盘下载可能需要输入提取码</li>
+                <li>下载完成后双击运行</li>
             </ol>
-            
-            <p><strong>⚠️ 注意：</strong></p>
-            <ul>
-                <li>确保你的电脑是Windows系统</li>
-                <li>如果被杀毒软件拦截，请添加信任</li>
-                <li>如有问题，请联系我获取技术支持</li>
-            </ul>
         </div>
     </div>
 </body>
