@@ -1,0 +1,443 @@
+/* 基础样式 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* 颜色和渐变 */
+.text-gradient {
+    background: linear-gradient(90deg, #fff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #111, #222);
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(135deg, #333, #444);
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+    transition: all 0.3s ease;
+    background-color: #111;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.05), 0 10px 10px -5px rgba(255, 255, 255, 0.02);
+}
+
+/* 导航链接效果 */
+.nav-link {
+    position: relative;
+    color: #fff;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background-color: #2543ea;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+}
+
+/* 英雄区域 */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://p26-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/963392019690029125~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1780838860&x-signature=NsfCqTX0umI%2Fnbo8%2Fd5PJGvAJ%2Bs%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 计数器动画 */
+.counter-value {
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+/* 服务卡片 */
+.service-card {
+    transition: all 0.3s ease;
+    background-color: #111;
+    border: 1px solid #222;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #333;
+}
+
+.service-card:hover .service-icon {
+    background-color: #fff;
+    color: #000;
+}
+
+.service-icon {
+    transition: all 0.3s ease;
+    background-color: #222;
+    color: #fff;
+}
+
+/* FAQ 项目 */
+.faq-item {
+    transition: all 0.3s ease;
+    background-color: #111;
+    border: 1px solid #222;
+}
+
+.faq-item:hover {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+/* 时间线样式 */
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #333;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* 推荐卡片 */
+.testimonial-card {
+    transition: all 0.3s ease;
+    background-color: #111;
+    border: 1px solid #222;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+    border-color: #333;
+}
+
+/* AI 计算器背景 */
+.ai-calculator {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url('https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/35e353a7f69a4014803079e77891383f~tplv-a9rns2rl98-image.image?rcl=202512092127280AA25B703E1471D3419F&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1767878890&x-signature=4jfiXIvcuNq%2FSEqGYcMyAvDDUMc%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 移动菜单 */
+.mobile-menu {
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    background-color: #000;
+    border-right: 1px solid #222;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* 加载动画 */
+.loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loading div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: loading 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loading div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes loading {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .timeline-item::before,
+    .timeline-item::after {
+        display: none;
+    }
+}
+
+/* 表单元素样式 */
+input, select, textarea {
+    background-color: #111 !important;
+    border-color: #333 !important;
+    color: #fff !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #555 !important;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    color: #fff !important;
+}
+
+/* 段落和文本样式 */
+p, span, li {
+    color: #ccc !important;
+}
+
+/* 链接样式 */
+a {
+    color: #fff !important;
+}
+
+a:hover {
+    color: #aaa !important;
+}
+
+/* 背景颜色类 */
+.bg-white {
+    background-color: #111 !important;
+}
+
+.bg-neutral-light {
+    background-color: #1a1a1a !important;
+}
+
+/* 边框样式 */
+.border, .border-gray-300 {
+    border-color: #333 !important;
+}
+
+/* 分隔线样式 */
+hr {
+    border-color: #333 !important;
+}
+
+/* 图标颜色 */
+.text-primary {
+    color: #fff !important;
+}
+
+.text-secondary {
+    color: #aaa !important;
+}
+
+.text-gray-600, .text-gray-500 {
+    color: #888 !important;
+}
+
+.text-green-500 {
+    color: #66bb6a !important;
+}
+
+/* 卡片阴影 */
+.shadow-lg, .shadow-md {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 按钮图标颜色 */
+.btn-primary i {
+    color: #000 !important;
+}
+
+.btn-secondary i {
+    color: #fff !important;
+}
+/* 添加到你的CSS文件中 */
+/* 假设你的微信图标类名为 .wechat-icon */
+.wechat-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.wechat-qrcode-container {
+  /* 初始位置可以根据需要调整 */
+  bottom: 80px;
+  right: 20px;
+}
+
+/* 三角指示器 */
+.wechat-qrcode-container::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+/* 确保在移动设备上也有良好显示 */
+@media (max-width: 768px) {
+  .wechat-qrcode-container {
+    bottom: 70px;
+    right: 10px;
+  }
+  
+  .wechat-qrcode-container img {
+    width: 36px;
+    height: 36px;
+  }
+}
+.wechat-qrcode-container p {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+/* 在css/style.css中添加或修改以下样式 */
+
+/* 回到顶部按钮样式 - 调整位置避免与咨询按钮重合 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px; /* 从底部向上30px */
+    right: 30px;  /* 从右侧向左30px - 与咨询按钮保持距离 */
+    width: 50px;
+    height: 50px;
+    background-color: #0A2463; /* 使用主色调 */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 40; /* 确保在内容之上但低于导航 */
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 如果咨询按钮使用固定定位，确保它有不同的位置 */
+.fixed-consult-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* 放在左侧，与右侧的回到顶部按钮分离 */
+    z-index: 40;
+    /* 其他样式保持不变 */
+}
+.calculator-result {
+  color: #000205; /* 使用主色调 */
+  /* 或者使用其他颜色 */
+  /* color: #E63946; 使用强调色 */
+  /* color: #333333; 使用深色 */
+  font-size: 1.5rem; /* 可以同时调整字体大小 */
+  font-weight: bold;
+}
+.calculator-result {
+  color: #333333; /* 结果区域文字颜色 */
+}
+
+.calculator-result .total-cost {
+  color: #E63946; /* 总费用数字颜色 */
+  font-weight: bold;
+}
+/* 弹窗动画样式 */
+#wechat-modal > div {
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+#wechat-modal > div.scale-100 {
+  transform: scale(1);
+}
+
+#wechat-modal > div.scale-95 {
+  transform: scale(0.95);
+}
